@@ -95,7 +95,7 @@ Assemble the sensor by completing the following:
 ## Credits & Inspiration
 
 ### ESPHome
-ESPHome made the whole project incredibly easier and more enjoyable. I'm glad I found ESPHome while working on this project! Please check them out and support their work if you can.
+[ESPHome](https://esphome.io) made the whole project incredibly easier and more enjoyable. I'm glad I found ESPHome while working on this project! Please check them out and support their work if you can.
 
 ### TheHookup
 Original inspiration for this project came from [thehookup](https://github.com/thehookup/MQTT_Window_Sensors). His youtube videos below were helpful in visualizing how the sensor could work.
