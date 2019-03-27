@@ -1,5 +1,5 @@
 # Directories
-/.venv
+.vscode/
 
 # Files
-sketch.ino
+

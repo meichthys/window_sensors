@@ -1,0 +1,31 @@
+esphome:
+  name: enter_name_of_sensor_here
+  platform: ESP8266
+  board: esp01_1m
+
+wifi:
+  ssid: enter_wifi_access_point_ssid_here
+  password: enter_wifi_password_here
+  fast_connect: true
+  manual_ip:
+    static_ip: enter_static_ip_address_here
+    gateway: enter_gateway_ip_address_here
+    subnet: 255.255.255.0
+
+mqtt:
+  broker: enter_mqtt_broker_ip_address_here:1883
+  username: enter_mqtt_username_here_if_applicable
+  password: enter_mqtt_password_here_if_applicable
+  birth_message:
+    topic: enter/mqtt/topic/here
+    payload: Open
+  will_message:
+    topic: enter/same/mqtt/topic/here
+    payload: Closed
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:

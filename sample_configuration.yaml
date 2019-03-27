@@ -1,4 +1,0 @@
-sensor:
-  - platform: mqtt
-    name: "Window Name"
-    state_topic: "home/windows/window"
