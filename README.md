@@ -29,7 +29,6 @@ This project is intended to provide tools/code/documentation for creating and se
     - The Adapter connects the ESP to the breadboard without needing to solder anything!
 - (Optional, but Highly Recommended) [Breadboard & jumper wires](https://www.aliexpress.com/item/3-3V-5V-MB102-Breadboard-power-module-MB-102-830-points-Solderless-Prototype-Bread-board-kit/32697390495.html)
 
-
 ### Software Components
 
 - [ESPHomeFlasher](https://github.com/esphome/esphome-flasher/releases)
@@ -37,33 +36,57 @@ This project is intended to provide tools/code/documentation for creating and se
 - [Home Automation Software](https://www.home-assistant.io)
 
 ## Building & Testing
+
 The general build process goes like:
 
 1. Flash your ESP8266 with the ESPHome firmware
-2. Print the enclosure ([Bottom](enclosure/Bottom.stl),[Top](enclosure/Top.stl))
-3. Wirelessly flash firmware to sensor
-4. Install sensor
+2. Configure MQTT broker to receive signal from sensor (See [MQTT](###MQTT) Below).
+3. Print the enclosure ([Bottom](enclosure/Bottom.stl),[Top](enclosure/Top.stl), [MagnetHolder](enclosure/MagnetHolder.stl)).
+4. Assemble & test sensor
+5. Repeat setps 1-4 for many more sensors!
 
-## Setup ESPHome Config
-ESPHome makes programming the esp microcontroller very easy - no Arduino, or sketch programming knowledge is needed. All the configuration is done via simple yaml configurations. We just need to simply follow the ESPHome documentation to assemble a configuration file that will send an MQTT (or other) alert to our home automation software whenever the microcontroller powers on. Don't worry, [Setting up ESPHome in HomeAssistant](https://esphome.io/guides/getting_started_hassio.html) is super easy.
+### Flash ESP8266 with ESPHome firmware
+
+ESPHome makes programming the esp microcontroller very easy - no Arduino, or sketch programming knowledge is needed. All the configuration is done via simple yaml configurations. We just need to simply follow the ESPHome documentation to assemble a configuration file that will send an MQTT (or other) alert to our home automation software whenever the microcontroller powers on. To install ESPHome Firmware:
+
+1. Follow the ESPHome [Getting Started walkthrough](https://esphome.io/guides/getting_started_hassio.html).
+2. Once finished with the initial ESPHome wizard, download the base firmware from ESPHome by clicking on the three dot menu and choosing *compile*, then choosing *Download Binary* once compiling has finished.
+3. Flash the ESPHome Binary to the ESP8266 chip using [ESPHomeFlasher](https://github.com/esphome/esphome-flasher/releases)
+    - [Wire the ESP12E for flashing mode](http://cdn.srccodes.com/c/2017/02/57/6.png). (It is very helpful to use a breadboard along with the adapter mentioned above.)
+    - Download [ESPHomeFlasher](https://github.com/esphome/esphome-flasher/releases)
+    - Flash the downloaded *.bin* firmware to the esp8266 chip using [ESPHomeFlasher](https://github.com/esphome/esphome-flasher/releases).
+    - Use the ESPHome web interface to configure and re-flash the esp8266 chip wirelessly. (See [esphome_config.yaml](esphome_config.yaml) for a sample ESPHome config file containing the [Wifi](###WiFi) and [MQTT](###MQTT) configurations explained below.
 
 ### WiFi
+
 The sensor will need to connect to a wifi access point. ESPHome makes this very easy with their [Wifi component](https://esphome.io/components/wifi.html). (See the sample [esphome_config.yaml](esphome_config.yaml) for a sample wifi configuration.)
 
 ### MQTT
-The sensor will send an MQTT signal to a specific MQTT topic that is specified in the ESPHome configuration (see the [esphome_config.yaml](esphome_config.yaml) file for a sample MQTT configuration). In order for the sensor to be useful, you will need to configure an MQTT server (broker) to receive the message that will be sent by the sensor. HomeAssistant has a built-in MQTT server that is easy to configure and is the preferred MQTT broker that this project will use. Setup in HomeAssistant is simple:
-1. [Setup Homeassistant](https://www.home-assistant.io/getting-started/) & enable the MQTT Add-On
-2. [Create an MQTT sensor in Homeassistant](https://www.home-assistant.io/components/sensor.mqtt/). Be sure to use the same topic that you will use in the sketch.ino file.
-3. Test your MQTT sensor using [an MQTT client](https://www.hivemq.com/blog/seven-best-mqtt-client-tools/). From your client MQTT tool, you will just need to make sure you are publishing to the same topic you've specified in your homeassistant setup.
 
-## Flash your ESP8266 & Test the MQTT signal
-Flashing an ESP8266 can be tricky to get right at first, but once you get it to work, you should be able to use the same process on each ESP8266 you'd like to flash. Here's my general process:
-1. [Wire the ESP12E for flashing mode](http://cdn.srccodes.com/c/2017/02/57/6.png). (It is very helpful to use a breadboard along with the adapter mentioned above.)
-2. Download [ESPHomeFlasher](https://github.com/esphome/esphome-flasher/releases)
-3. Run through the ESPHome [initial setup wizard](https://esphome.io/guides/getting_started_hassio.html) and download the initial .bin firmware from the ESPHome initial setup wizard.
-4. Flash the inital .bing firmeare to the esp12e chip using ESPHomeFlasher.
-5. Use ESPHome to configure and re-flash the esp12e chip wirelessly. (See [esphome_config.yaml](esphome_config.yaml) for a sample ESPHome configuration file.)
-6. Power on the sensor to test the MQTT signal.
+The sensor will send an MQTT signal to a specific MQTT topic that is specified in the ESPHome configuration (see the [esphome_config.yaml](esphome_config.yaml) file for a sample MQTT configuration). In order for the sensor to be useful, you will need to configure an MQTT server (broker) to receive the message that will be sent by the sensor. HomeAssistant has a built-in MQTT server that is easy to configure and is the preferred MQTT broker that this project will use. Setup in HomeAssistant is simple:
+
+1. [Setup Homeassistant](https://www.home-assistant.io/getting-started/) & enable the HASSIO [MQTT Add-On](https://www.home-assistant.io/addons/mosquitto/)
+2. Test your MQTT broker by using an [MQTT client](https://www.hivemq.com/blog/seven-best-mqtt-client-tools/). From your client MQTT tool, you will just need to make sure you are publishing to the same topic you've specified in your homeassistant setup.
+
+## Print Enclosure
+You will need to 3D-Print or [have someone print the enclosure for you](https://lifehacker.com/five-best-3d-printing-services-1706410803). The enclosure consists of the following:
+
+- [The Bottom](enclosure/Bottom.stl) (Holds the ESP8266 chip and the magnetically activated reed switch)
+- [The Top](enclosure/Top.stl) (Seals the sensor & holds the battery in place)
+- [The Magnet Holder](enclosure/MagnetHolder.stl) (Holds the magnets used to activate the sensor)
+
+Note: If you would like to edit the design of the enclosure, open the [WindowSensorEnclosure.skp](enclosure/WindowSensorEnclosure.skp) file in [Sketchup](https://www.sketchup.com) and submit a pull request if you think the desing is worth sharing!
+
+## Assemble & Test Sensor
+Assemble the sensor by completing the following:
+
+- Solder a jumper wire between the *EN* pin and the *VCC* pin on the esp8266
+- Solder a jumper wire or bridge the *IO15* pin and the *GND* pin on the esp8266
+- Solder one end of the reed switch to the *GND* pin of the esp8266
+- Solder the copper wire to the *EN* or *VCC* pin of the esp8266
+- Place the esp8266 in the bottom of the enclosure and bend the reed switch wire and the copper wire so that the ends sit in the grooves. (This requires a little patience to get the wires situated correctly, but once they are set, they shouln't need to be adjusted again.)
+- Insert the battery and confirm that the esp8266 powers on. If it doesn't power on, re-check your wiring and battery voltage.
+- Using Homeassistant or an MQTT Client, verify that the MQTT message is being sent on the topic you specified in the ESPHome config.
 
 ## Credits & Inspiration
 
