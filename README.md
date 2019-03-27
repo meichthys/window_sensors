@@ -58,11 +58,11 @@ ESPHome makes programming the esp microcontroller very easy - no Arduino, or ske
     - Flash the downloaded *.bin* firmware to the esp8266 chip using [ESPHomeFlasher](https://github.com/esphome/esphome-flasher/releases).
     - Use the ESPHome web interface to configure and re-flash the esp8266 chip wirelessly. (See [esphome_config.yaml](esphome_config.yaml) for a sample ESPHome config file containing the [Wifi](###WiFi) and [MQTT](###MQTT) configurations explained below.
 
-### WiFi
+#### WiFi
 
 The sensor will need to connect to a wifi access point. ESPHome makes this very easy with their [Wifi component](https://esphome.io/components/wifi.html). (See the sample [esphome_config.yaml](esphome_config.yaml) for a sample wifi configuration.)
 
-### MQTT
+#### MQTT
 
 The sensor will send an MQTT signal to a specific MQTT topic that is specified in the ESPHome configuration (see the [esphome_config.yaml](esphome_config.yaml) file for a sample MQTT configuration). In order for the sensor to be useful, you will need to configure an MQTT server (broker) to receive the message that will be sent by the sensor. HomeAssistant has a built-in MQTT server that is easy to configure and is the preferred MQTT broker that this project will use. Setup in HomeAssistant is simple:
 
