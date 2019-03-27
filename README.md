@@ -20,6 +20,7 @@ This project is intended to provide tools/code/documentation for creating and se
 - x1 [Normally closed Reed Switch](https://www.aliexpress.com/item/5pcs-Reed-Switch-3-pin-Magnetic-Switch-2-5-14mm-Normally-Open-Normally-Closed-Conversion-2/32947287626.html)
 - x1 [3.7v YX-W9B Rechargable Battery]()
 - x1 2" insulated small guage copper wire (The twisted pairs of a ethernet cable work perfectly)
+- x3 [4mm Magnets](https://www.aliexpress.com/item/100pcs-4mm-x1mm-strong-disc-magnets-4x1-neodymium-magnets-4-1-Art-Nouveau-connection-magnets-NdFeB/32948666622.html)
 
 ### Development Components
 
