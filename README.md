@@ -52,7 +52,7 @@ ESPHome makes programming the esp microcontroller very easy - no Arduino, or ske
 1. Follow the ESPHome [Getting Started walkthrough](https://esphome.io/guides/getting_started_hassio.html).
 2. Once finished with the initial ESPHome wizard, download the base firmware from ESPHome by clicking on the three dot menu and choosing *compile*, then choosing *Download Binary* once compiling has finished.
 3. Flash the ESPHome Binary to the ESP8266 chip using [ESPHomeFlasher](https://github.com/esphome/esphome-flasher/releases)
-    - [Wire the ESP12E for flashing mode](http://cdn.srccodes.com/c/2017/02/57/6.png). (It is very helpful to use a breadboard along with the adapter mentioned above.)
+    - [Wire the ESP12E for flashing mode](http://cdn.srccodes.com/c/2017/02/57/6.png). (It is very helpful to use a breadboard along with the adapter mentioned above (See [image](images/esp8266_flash_wiring.png))
     - Download [ESPHomeFlasher](https://github.com/esphome/esphome-flasher/releases)
     - Flash the downloaded *.bin* firmware to the esp8266 chip using [ESPHomeFlasher](https://github.com/esphome/esphome-flasher/releases).
     - Use the ESPHome web interface to configure and re-flash the esp8266 chip wirelessly. (See [esphome_config.yaml](esphome_config.yaml) for a sample ESPHome config file containing the [Wifi](###WiFi) and [MQTT](###MQTT) configurations explained below.
@@ -81,12 +81,13 @@ Note: If you would like to edit the design of the enclosure, open the [WindowSen
 Assemble the sensor by completing the following:
 
 - Solder a jumper wire between the *EN* pin and the *VCC* pin on the esp8266
-- Solder a jumper wire or bridge the *IO15* pin and the *GND* pin on the esp8266
+- Solder a jumper wire or bridge the *IO15* pin and the *GND* pin on the esp8266 (See [image](images/esp8266_pre_install.png))
 - Solder one end of the reed switch to the *GND* pin of the esp8266
 - Solder the copper wire to the *EN* or *VCC* pin of the esp8266
 - Place the esp8266 in the bottom of the enclosure and bend the reed switch wire and the copper wire so that the ends sit in the grooves. (This requires a little patience to get the wires situated correctly, but once they are set, they shouln't need to be adjusted again.)
 - Insert the battery and confirm that the esp8266 powers on. If it doesn't power on, re-check your wiring and battery voltage.
 - Using Homeassistant or an MQTT Client, verify that the MQTT message is being sent on the topic you specified in the ESPHome config.
+- Setup [automations](https://www.home-assistant.io/components/automation/) in HomeAssistant to your liking to trigger actions based upon sensor state.
 
 ## Credits & Inspiration
 
