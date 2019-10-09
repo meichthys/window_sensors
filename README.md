@@ -16,6 +16,7 @@ This project is intended to provide tools/code/documentation for creating and se
 
 ### Sensor Components
 
+The following components are required to build a single sensor:
 - x1 [ESP8266 12E](https://www.aliexpress.com/item/new-ESP8266-Remote-Serial-Port-WIFI-Transceiver-Wireless-Module-Esp-12F-AP-STA/32633529267.html)
 - x1 [Normally closed Reed Switch](https://www.aliexpress.com/item/5pcs-Reed-Switch-3-pin-Magnetic-Switch-2-5-14mm-Normally-Open-Normally-Closed-Conversion-2/32947287626.html)
 - x1 [3.7v YX-W9B Rechargable Battery](https://www.aliexpress.com/item/1pc-3Pcs-380mAh-SmartWatch-Rechargeable-Li-ion-polymer-battery-For-DZ09-Smart-Watch-Battery-For-KSW/32927626838.html)
@@ -24,6 +25,8 @@ This project is intended to provide tools/code/documentation for creating and se
 
 ### Development Components
 
+These following components can be purchased once and used to assemble any number of sensors:
+- x1 [Breadboard](https://www.aliexpress.com/item/32787386567)
 - x1 [USB to TTL adapter](http://a.co/d/hhTu3ec) (Drivers can be found [here]( http://www.prolific.com.tw/US/ShowProduct.aspx?pcid=41&showlevel=0041-0041))
 - (Optional, but Highly Recommended) ESP to Breadboard Adapter ([Pin Headers](https://www.aliexpress.com/item/86056-Free-Shipping-20pcs-2mm-40-Pin-Male-Single-Row-Pin-Header-Strip/32784910355.html), [Adapter](https://www.aliexpress.com/item/IDE-2-5-to-3-5-inch-Laptop-Hard-Drive-Converter-Adapter/32335319922.html))
     - The Pin Headers fit into the holes on the ESP12E chip
