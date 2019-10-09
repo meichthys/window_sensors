@@ -26,12 +26,13 @@ The following components are required to build a single sensor:
 ### Development Components
 
 These following components can be purchased once and used to assemble any number of sensors:
-- x1 [Breadboard](https://www.aliexpress.com/item/32787386567)
+
 - x1 [USB to TTL adapter](http://a.co/d/hhTu3ec) (Drivers can be found [here]( http://www.prolific.com.tw/US/ShowProduct.aspx?pcid=41&showlevel=0041-0041))
-- (Optional, but Highly Recommended) ESP to Breadboard Adapter ([Pin Headers](https://www.aliexpress.com/item/86056-Free-Shipping-20pcs-2mm-40-Pin-Male-Single-Row-Pin-Header-Strip/32784910355.html), [Adapter](https://www.aliexpress.com/item/IDE-2-5-to-3-5-inch-Laptop-Hard-Drive-Converter-Adapter/32335319922.html))
+- (Optional, but Highly Recommended) x1 [Breadboard](https://www.aliexpress.com/item/32787386567.html)
+- (Optional, but Highly Recommended) x1 ESP to Breadboard Adapter ([Pin Headers](https://www.aliexpress.com/item/86056-Free-Shipping-20pcs-2mm-40-Pin-Male-Single-Row-Pin-Header-Strip/32784910355.html), x2 [Adapter](https://www.aliexpress.com/item/IDE-2-5-to-3-5-inch-Laptop-Hard-Drive-Converter-Adapter/32335319922.html))
     - The Pin Headers fit into the holes on the ESP12E chip
-    - The Adapter connects the ESP to the breadboard without needing to solder anything!
-- (Optional, but Highly Recommended) [Breadboard & jumper wires](https://www.aliexpress.com/item/3-3V-5V-MB102-Breadboard-power-module-MB-102-830-points-Solderless-Prototype-Bread-board-kit/32697390495.html)
+    - The Adapters connect the ESP to the breadboard without needing to solder anything!
+- (Optional, but Highly Recommended) x1 [Breadboard & jumper wires](https://www.aliexpress.com/item/3-3V-5V-MB102-Breadboard-power-module-MB-102-830-points-Solderless-Prototype-Bread-board-kit/32697390495.html)
 
 ### Software Components
 
