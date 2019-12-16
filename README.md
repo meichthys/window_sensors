@@ -9,8 +9,10 @@ This project is intended to provide tools/code/documentation for creating and se
 - Be easy to create and maintain
 - Be wireless (Wifi & Battery powered)
 
+![](images/size_view.png)
 ![](images/profile_view.png)
 ![](images/open_view.png)
+![](images/assemble_view.png)
 
 ## Supplies/Requirements
 
