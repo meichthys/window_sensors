@@ -8,6 +8,7 @@ This project is intended to provide tools/code/documentation for creating and se
 - Work seemlessly with home automation software
 - Be easy to create and maintain
 - Be wireless (Wifi & Battery powered)
+- Have a usable battery lifespan (YMMV, but I currently have some sensors over 2 years old with the original battery!)
 
 ![](images/size_view.JPG)
 ![](images/profile_view.png)
