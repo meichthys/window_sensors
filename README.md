@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is intended to provide tools/code/documentation for creating and setting up very cheap window/door sensors. The project will not describe every detail in the process but it will point you to the needed links. The sensors are designed to work within the following parameters.
+This project is intended to provide tools/code/documentation for creating and setting up very inexpensive window/door sensors. The project will not describe every detail in the process but it will point you to the needed links. The sensors are designed to work within the following parameters.
 
 - Cost under $5 each
 - Work seemlessly with home automation software
@@ -19,7 +19,7 @@ This project is intended to provide tools/code/documentation for creating and se
 
 ### Sensor Components
 
-The following components are required to build a single sensor:
+The following components are required to build a single sensor.
 - x1 [ESP8266 12E](https://www.aliexpress.com/item/new-ESP8266-Remote-Serial-Port-WIFI-Transceiver-Wireless-Module-Esp-12F-AP-STA/32633529267.html)
 - x1 [Normally closed Reed Switch](https://www.aliexpress.com/item/5pcs-Reed-Switch-3-pin-Magnetic-Switch-2-5-14mm-Normally-Open-Normally-Closed-Conversion-2/32947287626.html)
 - x1 [3.7v YX-W9B Rechargable Battery](https://www.aliexpress.com/item/1pc-3Pcs-380mAh-SmartWatch-Rechargeable-Li-ion-polymer-battery-For-DZ09-Smart-Watch-Battery-For-KSW/32927626838.html)
@@ -45,7 +45,7 @@ These following components can be purchased once and used to assemble any number
 
 ## Building & Testing
 
-The general build process goes like:
+The general build process to build a sensor looks like:
 
 1. Flash your ESP8266 with the ESPHome firmware
 2. Configure MQTT broker to receive signal from sensor (See [MQTT](###MQTT) Below).
