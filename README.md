@@ -21,22 +21,22 @@ This project is intended to provide tools/code/documentation for creating and se
 
 The following components are required to build a single sensor.
 
-- x1 [ESP8266 12E](https://www.aliexpress.com/item/new-ESP8266-Remote-Serial-Port-WIFI-Transceiver-Wireless-Module-Esp-12F-AP-STA/32633529267.html)
-- x1 [Normally closed Reed Switch](https://www.aliexpress.com/item/5pcs-Reed-Switch-3-pin-Magnetic-Switch-2-5-14mm-Normally-Open-Normally-Closed-Conversion-2/32947287626.html)
-- x1 [3.7v YX-W9B Rechargable Battery](https://www.aliexpress.com/item/1pc-3Pcs-380mAh-SmartWatch-Rechargeable-Li-ion-polymer-battery-For-DZ09-Smart-Watch-Battery-For-KSW/32927626838.html)
+- x1 [ESP8266 12E](https://www.aliexpress.com/w/wholesale-ESP8266-ESP12F-Serial-WIFI-Model-ESP12E-Upgrade.html)
+- x1 [Normally closed Reed Switch](https://www.aliexpress.com/w/wholesale-normally-closed-reed-switch-3-pin.html)
+- x1 [3.7v YX-W9B Rechargable Battery](https://www.aliexpress.com/w/wholesale-palo-watch-battery-smart-dz09.html)
 - x1 2" insulated small guage copper wire (The twisted pairs of a ethernet cable work perfectly)
-- x3 [5mm Magnets](https://www.aliexpress.com/item/32953032626.html?spm=a2g0s.9042311.0.0.7d124c4ddOXJxX)
+- x1 [15x5x5mm Magnets](https://www.aliexpress.com/w/wholesale-15x5x5-magnet.html)
 
 ### Development Components
 
 These following components can be purchased once and used to assemble any number of sensors:
 
-- x1 [USB to TTL adapter](http://a.co/d/hhTu3ec) (Drivers can be found [here]( http://www.prolific.com.tw/US/ShowProduct.aspx?pcid=41&showlevel=0041-0041))
-- (Optional, but Highly Recommended) x1 [Breadboard](https://www.aliexpress.com/item/32787386567.html)
-- (Optional, but Highly Recommended) x1 ESP to Breadboard Adapter ([Pin Headers](https://www.aliexpress.com/item/86056-Free-Shipping-20pcs-2mm-40-Pin-Male-Single-Row-Pin-Header-Strip/32784910355.html), x2 [Adapter](https://www.aliexpress.com/item/IDE-2-5-to-3-5-inch-Laptop-Hard-Drive-Converter-Adapter/32335319922.html))
+- x1 [USB to TTL adapter](http://a.co/d/hhTu3ec) (Drivers can be found [here](http://www.prolific.com.tw/US/ShowProduct.aspx?pcid=41&showlevel=0041-0041))
+- (Optional, but Highly Recommended) x1 [Breadboard kit](https://www.aliexpress.com/w/wholesale-breadboard-kit-mb102.html)
+- (Optional, but Highly Recommended) x1 ESP to Breadboard Adapter ([Pin Headers](https://www.aliexpress.com/w/wholesale-1x40-single-row-pin-header.html), x2 [Adapter](https://www.aliexpress.com/w/wholesale-2.5%22-Inch-44-pin-to-3.5%22-Inch-40-pin-IDE-laptop.html))
     - The Pin Headers fit into the holes on the ESP12E chip
     - The Adapters connect the ESP to the breadboard without needing to solder anything!
-- (Optional, but Highly Recommended) x1 [Breadboard & jumper wires](https://www.aliexpress.com/item/3-3V-5V-MB102-Breadboard-power-module-MB-102-830-points-Solderless-Prototype-Bread-board-kit/32697390495.html)
+
 
 ### Software Components
 
