@@ -137,3 +137,10 @@ Any pull requests and/or improvements would be greatly appreciated.
 ## License
 
 [MIT Licnese](license.txt)
+
+## Support
+
+If you found this project helpful, please let me know by considering supporting me. This gives me an incentive to keep it up to date.
+You can support me on Liberapay or Github Sponsors:
+
+<a href="https://liberapay.com/meichthys/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
